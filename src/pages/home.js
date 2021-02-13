@@ -1,10 +1,14 @@
 import React from 'react'
 import { Header } from '../containers'
+import CityDestinationContainer from '../containers/cityDestinationContainer'
 
 function Home() {
     return (
         <>
-            <Header />   
+            <Header /> 
+            <div>
+                <CityDestinationContainer/>  
+            </div>  
         </>
     )
 }
