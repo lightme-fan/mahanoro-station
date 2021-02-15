@@ -2,11 +2,22 @@ import styled from "styled-components"
 
 export const Container = styled.header`
     margin: 0;
+    background-color: #0F0E17;
+    color: #fff;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 `
 
 export const Wrapper = styled.div`
-    max-width: 1125px;
+    max-width: 1114px;
     margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 export const Logo = styled.h1`

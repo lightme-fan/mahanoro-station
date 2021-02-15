@@ -1,39 +1,27 @@
 import React from 'react'
-import { connect, useSelector } from 'react-redux'
-import { CityDestination } from '../components/cityDestination'
-import { fetchApi } from '../redux/actions/fetchApi';
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 
-function CityDestinationContainer({data}) {
-    console.log(data);
-    const item = useSelector(state => state)
-    console.log(item);
+import { CityDestination } from '../components/cityDestination'
+
+function CityDestinationContainer() {
+    const cities = useSelector(state => state.cities)
     return (
         <CityDestination>
             <CityDestination.Fame>
+                <CityDestination.Title>
+                    Where are you going?
+                </CityDestination.Title>
                 <CityDestination.Cities>
-                    {/* {data.map(item =>  */}
-                        <CityDestination.ListCities>
-                            <CityDestination.Button></CityDestination.Button>
+                    {cities.map(city => 
+                        <CityDestination.ListCities key={city.id}>
+                            <Link to={`/${city.destination}`}>{city.destination}</Link>
                         </CityDestination.ListCities>
-                    {/* )} */}
+                    )}
                 </CityDestination.Cities>
             </CityDestination.Fame>
         </CityDestination>
     )
 }
 
-function mapStateToProps(state) {
-    // console.log(dispatch);
-    return {
-        data: state
-    }
-}
-
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         data: () => dispatch(fetchApi)
-//     }
-// }
-
-export default connect(mapStateToProps, null)(CityDestinationContainer)
-// export default CityDestinationContainer
+export default CityDestinationContainer

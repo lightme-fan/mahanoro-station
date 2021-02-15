@@ -3,6 +3,7 @@ import React from 'react'
 import { 
     Container,
     Fame,
+    Title,
     Cities,
     ListCities,
     Button
@@ -14,6 +15,10 @@ export function CityDestination({children, ...restProps}) {
 
 CityDestination.Fame = function CityDestinationFame({children, ...restProps}) {
     return <Fame {...restProps}>{children}</Fame>
+}
+
+CityDestination.Title = function CityDestinationTitle({children, ...restProps}) {
+    return <Title {...restProps}>{children}</Title>
 }
 
 CityDestination.Cities = function CityDestinationCities({children, ...restProps}) {
