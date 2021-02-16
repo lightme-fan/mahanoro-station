@@ -8,7 +8,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/lightme-fan/github-jobs">
+    <a href="https://github.com/lightme-fan/mahanoro-station">
       Solution
     </a>
   </h3>
@@ -109,4 +109,4 @@ $ parcel index.html
 ## Contact
 
 -   Website [Github jobs](https://fanilo-github-jobs.netlify.app/)
--   GitHub [lightme-fan](https://github.com/lightme-fan/github-jobs)
+-   GitHub [lightme-fan](https://github.com/lightme-fan/mahanoro-station)
