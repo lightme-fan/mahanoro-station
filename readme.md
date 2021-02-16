@@ -1,38 +1,112 @@
 # Graded Project - Mahanoro Station
 
-![Design preview for the Mahanoro station coding challenge](./design/1.png)
+<h1 align="center">Graded Project - Mahanoro Station</h1>
 
-## The challenge
+<div align="center">
+  <h3>
+    <a href="https://fanilo-github-jobs.netlify.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/lightme-fan/mahanoro-station">
+      Solution
+    </a>
+  </h3>
+</div>
 
-Your challenge is to build out this app and get it working with **redux**, **compound components** and **styled components**, while making it look as close to the design as possible.
+<!-- TABLE OF CONTENTS -->
 
-This is a website that will allow us to reserve some seats in _"Taxi brousses"_ departing from Mahanoro station.
+## Table of Contents
 
-Your users should be able to:
+-   [Overview](#overview)
+    -   [Built With](#built-with)
+-   [Features](#features)
+-   [How to use](#how-to-use)
+-   [Contact](#contact)
+-   [Acknowledgements](#acknowledgements)
 
-- Pick a city from the city list
-- See the available trips to that city, and pick one where seats are still availalable
-- Select one or more seats in the car, and see how much it's going to cost
-- Confirm the booking
-- See their confirmed bookings on the 'My account'page
-- Modify their own information, like name or phone number, on that same page.
+<!-- OVERVIEW -->
 
-## Where to find everything
+## Overview
 
-Your task is to build out the project to the designs from this Figma link: https://www.figma.com/file/6gSAJpaedebKAUuaM4ekFR/Mahanoro-Station?node-id=4%3A38
+![screenshot](./assets/screeshot.png)
+![screenshot2](./assets/screenshot2.png)
 
-The data from the trips are available on this link : https://gist.githubusercontent.com/Pinois/36bb5fbf9b6a686f0baf4006dd137bca/raw/a40d8b3f696a75f388db286d57bdd05a925fa0e7/trips.json
+### My Project
 
-## Building your project
+- You can see the demo of this project by visiting this link **https://fanilo-github-jobs.netlify.app/**.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+1- In this project, I come accross with a lot of experiences. I find out how useReducer and filter work together. I also install few packages which I never came accross such as react-js-pagination. So, I find out how pagination work in react.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). This will make it easier to share your code with the community if you need some help. If you're not sure how to do this, [have a read through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a URL. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, but I recommend you to use **Netlify**.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead how your data and reducers will look like.
+2- This project has few **folders** which contain few files. Fistly, I have ***components***, ***containers***, ***redux*** and ***pages*** folders. In each folder, there are files and six js files. Those two folders are **search** and **style** which contains **style.js** file. In ***search*** folder, there are four js files. Those six files are **FilterByLocation**, **FilterByType**, **MainSearch** and **Search**.
 
-## Submit your project
+- These are also the 6 js files in the big components
+  - header
+  - trips
+  - account
+  - cityDestination
+  - book-seat
+- In the **pags** folder:
+  - Home
+  - 
+  - 
+  - 
+- **Containers** folder
+  - headerContainer
+  - tripsContainer
+  - accountContainer
+  - cityDestinationContainer
+  - book-seat
+- **redux** folder
+  - actions
+  - store
+  - reducers
+ - App
+ - index
+ - global-styles
+### Built With
+This project is build with [React](https://reactjs.org/) and [redux](https://redux.js.org/)
 
-You have until **Tuesday** at **15h30** to submit your github link and netlify link on this form : https://forms.gle/ikBWC2MokmdH4jdw6
+## Features
+These are the feature of this project
 
-**Have fun building!** 🚀
+- Searching jobs by title or company
+- Searching jobs by location or city
+- Searching by type, Just check the full time checkbox
+- Search by checking the city checkboxes
+- At the bottom of the job list, you can see other jobs by going to the next page.
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/lightme-fan/github-jobs
+
+# Install dependencies
+$ npm init
+
+$ npm install react
+$ npm install react-dom
+$ npm install react-router-dom
+$ npm install react-js-pagination
+$ npm install react-axios
+$ npm install styled-components
+$ npm install date-fns
+$ npm install redux
+$ npm install react-redux
+$ npm install redux-thunk
+
+# Run the app
+$ parcel index.html
+```
+
+## Acknowledgements
+
+<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
+
+## Contact
+
+-   Website [Github jobs](https://fanilo-github-jobs.netlify.app/)
+-   GitHub [lightme-fan](https://github.com/lightme-fan/mahanoro-station)
