@@ -8,8 +8,10 @@ function HeaderContainer() {
         <Header>
             <Header.Wrapper>
                 <Header.Logo>
-                    <Header.ImageLogo src={logoIcon} alt="Logo"/>
-                    <Header.TextLogo>Mahanoro Station</Header.TextLogo>
+                    <Link to='/'>
+                        <Header.ImageLogo src={logoIcon} alt="Logo"/>
+                        <Header.TextLogo>Mahanoro Station</Header.TextLogo>
+                    </Link>
                 </Header.Logo>
                 <Link to='/account'>My account</Link>
             </Header.Wrapper>

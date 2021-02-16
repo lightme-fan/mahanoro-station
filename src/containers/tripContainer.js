@@ -16,10 +16,10 @@ function TripContainer() {
             <Header/>
             <Trips.Wrapper>
                 <Trips.Title>
+                    <img src={clock} alt="Time departure" />
                     <div>
-                        <img src={clock} alt="Time departure" />
                         <h2>Next trips to:</h2>
-                        <div>{destination}</div>
+                        <p>{destination}</p>
                     </div>
                 </Trips.Title>
                 {trips.map(trip => {
@@ -30,15 +30,15 @@ function TripContainer() {
                             <Trips.Departure>
                                 <Trips.TimeDeparture>
                                     <div>{trip.departureTime}</div>
-                                    <div>{trip.departureTime}</div>
                                 </Trips.TimeDeparture>
                                 <Trips.DateDeparture>
+                                    <div>{trip.departureTime}</div>
                                     <Trips.AvailableSeats>{availableSeats} seats lefts</Trips.AvailableSeats>
                                 </Trips.DateDeparture>
-                                {availableSeats === 0 ?
-                                    <button disabled>Book a seat</button> :
-                                    <button><Link to={`/${trip.destination}/${trip.departureTime}`}>Book a seat</Link></button>}                                
                             </Trips.Departure>
+                            {availableSeats === 0 ?
+                                <button disabled>Book a seat</button> :
+                                <Link to={`/destination/${trip.destination}/${trip.destination}`}>Book a seat</Link>}                                
                         </Trips.Card>
                     )
                 })}

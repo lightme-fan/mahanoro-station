@@ -9,20 +9,19 @@ import availableSeat from '../../svg/availableSeat.svg'
 import bookSeat from '../../svg/bookSeat.svg'
 import { showModal } from '../redux/actions/modalAction'
 import ModalContainer from './ModalContainer'
+import { handleBookSeatAction } from '../redux/actions/handleBookSeatAction'
 
 function BookSeatContainer() {
     const trips = useSelector(state => state.tripsData)
     const modal = useSelector(state => state.isModalOpen)
-    console.log(modal);
+    const bookSeat = useSelector(state => state.bookedSeats)
     const dispatch = useDispatch()
-    const { departureTime } = useParams()
-
-    // console.log(Number(departureTime));
+    const { destination } = useParams()
+    console.log(bookSeat);
     const carSeats = trips.find(item => {
-        return item.departureTime == Number(departureTime)
+        return item.destination === destination
     })
-    console.log(carSeats);
-
+    
     return (
         <BookSeat className={modal === true && 'disabled'}>
             <Header/>
@@ -42,7 +41,7 @@ function BookSeatContainer() {
                                 carSeats?.seats.map(seat => {
                                     return (
                                         seat.isAvailable  && !seat.passengerFirstName && !seat.passengerLastName ? 
-                                            <img src={availableSeat} /> : 
+                                            <img src={availableSeat} className={bookSeat && 'booked'} onClick={() => dispatch(handleBookSeatAction())} /> : 
                                             <img src={unavailableSeat} />  
                                     )
                                 })
@@ -58,8 +57,8 @@ function BookSeatContainer() {
                             <li>Estimated duration: <b>{carSeats?.estimatedDuration}</b></li>
                             <li>Breaks: <b>{carSeats?.breaks}</b></li>
                         </ul>
-                        <div>20 000 <b>Ar</b>/seat</div>
-                        <button onClick={() => dispatch(showModal())}>Book 2 seats</button>
+                        <div>20 000 <b>Ar/<span>seat</span></b></div>
+                        <button onClick={() => dispatch(showModal())}>Book {bookSeat} seats</button>
                     </BookSeat.TripInfo>
                 </BookSeat.Detail>
                 <div>

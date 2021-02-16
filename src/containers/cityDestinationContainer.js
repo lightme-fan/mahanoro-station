@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 
 import { CityDestination } from '../components/cityDestination'
+import carIcon from '../../svg/carIcon.svg'
+import building from '../../svg/building.svg'
 
 function CityDestinationContainer() {
     const cities = useSelector(state => state.cities)
@@ -10,12 +12,16 @@ function CityDestinationContainer() {
         <CityDestination>
             <CityDestination.Fame>
                 <CityDestination.Title>
-                    Where are you going?
+                    <img src={carIcon} alt='Destination'/>
+                    <span>Where are you going?</span>
                 </CityDestination.Title>
                 <CityDestination.Cities>
                     {cities.map(city => 
                         <CityDestination.ListCities key={city.id}>
-                            <Link to={`/${city.destination}`}>{city.destination}</Link>
+                            <Link to={`/destination/${city.destination}`}>
+                                <img src={building} alt='Building'/>
+                                {city.destination}
+                            </Link>
                         </CityDestination.ListCities>
                     )}
                 </CityDestination.Cities>

@@ -22,8 +22,10 @@ export const Wrapper = styled.div`
 
 export const Logo = styled.h1`
     margin: 0;
-    display: flex;
-    gap: 30px;
+    a {
+        display: flex;
+        gap: 30px;
+    }
 `
 export const ImageLogo = styled.img`
     width: 24px;

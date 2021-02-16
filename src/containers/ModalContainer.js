@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from '../components/Modal'
 import comfirmIcon from '../../svg/comfirmIcon.svg'
+import { Link } from 'react-router-dom'
 
 function ModalContainer() {
     return (
@@ -13,7 +14,7 @@ function ModalContainer() {
                 <Modal.Text>
                     Thank you for trusting our services. Your booking has been added to your account. You can review it there.
                 </Modal.Text>
-                <Modal.ComfirmButton>Check your account</Modal.ComfirmButton>
+                <Modal.ComfirmButton><Link to='/account'>Check your account</Link></Modal.ComfirmButton>
             </Modal.Wrapper>
         </Modal>
     )

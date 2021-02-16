@@ -19,6 +19,16 @@ function tripsReducer(state= [], action) {
     }
 }
 
+function bookSeatReducer(state= 0, action) {
+    switch (action.type) {
+        case 'CLICK_BOOK_SEAT' : {
+            return state + 1
+        }
+        default:
+            return state
+    }
+}
+
 function cityDestinationReducer(state = cities, action) {
     switch (action.type) {
         case 'CITY_DESTINATION':
@@ -40,5 +50,6 @@ function modalReducer(state = false, action) {
 export const rootReducer = combineReducers({
     tripsData: tripsReducer,
     cities: cityDestinationReducer,
-    isModalOpen: modalReducer
+    isModalOpen: modalReducer,
+    bookedSeats: bookSeatReducer
 }) 
