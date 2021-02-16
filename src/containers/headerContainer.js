@@ -3,7 +3,7 @@ import { Header } from '../components/header'
 import logoIcon from '../../svg/logo-icon.svg'
 import { Link } from 'react-router-dom'
 
-function headerContainer() {
+function HeaderContainer() {
     return (
         <Header>
             <Header.Wrapper>
@@ -17,4 +17,4 @@ function headerContainer() {
     )
 }
 
-export default headerContainer
+export default HeaderContainer

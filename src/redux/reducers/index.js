@@ -28,7 +28,17 @@ function cityDestinationReducer(state = cities, action) {
     }
 }
 
+function modalReducer(state = false, action) {
+    switch (action.type) {
+        case 'SHOW_MODAL_CONFIRM':
+            return state = true
+        default:            
+        return state
+    }
+}
+
 export const rootReducer = combineReducers({
     tripsData: tripsReducer,
-    cities: cityDestinationReducer
+    cities: cityDestinationReducer,
+    isModalOpen: modalReducer
 }) 

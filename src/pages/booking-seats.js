@@ -1,12 +1,12 @@
 import React from 'react'
-import TripContainer from '../containers/tripContainer'
+import BookSeatContainer from '../containers/bookSeatContainer'
 
 function BookingSeats() {
-    return (
-        <>
-            <TripContainer />   
-        </>
-    )
+  return (
+    <>
+      <BookSeatContainer />
+    </>
+  )
 }
 
 export default BookingSeats
