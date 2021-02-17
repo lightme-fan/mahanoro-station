@@ -1,12 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+
 import Modal from '../components/Modal'
 import comfirmIcon from '../../svg/comfirmIcon.svg'
-import { Link } from 'react-router-dom'
+import { hideModal } from '../redux/actions/modalAction'
 
 function ModalContainer() {
+    const dispatch = useDispatch() 
     return (
         <Modal>
             <Modal.Wrapper>
+                <button 
+                    onClick={() => dispatch(hideModal())}
+                    style={{
+                        border: 'none',
+                        cursor: 'pointer',
+                        backgroundColor: 'transparent',
+                        fontSize: '2rem',
+                        width: '50px',
+                        textAlign: 'end',
+                        transform: 'translateX(400px)'
+                    }}
+                >X</button>
                 <Modal.Heading>
                     <Modal.Logo src={comfirmIcon}/>
                     <Modal.Title>Booking comfirmed!</Modal.Title>

@@ -4,14 +4,20 @@ export const Container = styled.div`
     height: 500px;
     border: 5px solid #E53170;
     box-sizing: border-box;
-    max-width: 100%;
-    margin: auto;
+    /* max-width: 100%;
+    margin: auto; */
     display: grid;
     position: absolute;
     padding: 0 15%;
-    top: 27px;
-    left: 20%;
-    z-index: 1;
+    top: 198px;
+    left: 0%;
+    z-index: 2;
+    background-color: #fff;
+
+    @media(min-width: 1000px) {
+        left: 25%;
+    }
+
 `;
 export const Wrapper = styled.div`
     max-width: 400px;

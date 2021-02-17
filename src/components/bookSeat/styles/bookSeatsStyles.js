@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    .disabled {
-        background: #FFFFFE;
+    
+    &.disabled-eleme {
+        z-index: 1;
+        opacity: 0.3;
     }
+
 `
 export const Wrapper = styled.div`
-    position: relative;
     z-index: 0;
     max-width: 1110px;
     margin: auto;
@@ -42,7 +44,7 @@ export const Detail = styled.div`
     }
 `
 
-export const Title = styled.h2``
+export const Title = styled.div``
 export const Choices = styled.div`
     div {
         display: grid;

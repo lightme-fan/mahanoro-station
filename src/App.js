@@ -24,7 +24,7 @@ function App() {
             <Route path='/destination/:destination' exact>
                 <TripContainer/>
             </Route>
-            <Route path='/destination/:destination/:destination'>
+            <Route path='/destination/:destination/:id'>
                 <BookingSeats/>
             </Route>
         </Switch>

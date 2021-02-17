@@ -4,7 +4,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://fanilo-github-jobs.netlify.app/">
+    <a href="https://fanilo-mahanoro-station.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -48,9 +48,10 @@
   - book-seat
 - In the **pags** folder:
   - Home
-  - 
-  - 
-  - 
+  - accout
+  - booking-seat
+  - next-trip
+  - index
 - **Containers** folder
   - headerContainer
   - tripsContainer
@@ -64,17 +65,16 @@
  - App
  - index
  - global-styles
+
 ### Built With
 This project is build with [React](https://reactjs.org/) and [redux](https://redux.js.org/)
 
 ## Features
 These are the feature of this project
 
-- Searching jobs by title or company
-- Searching jobs by location or city
-- Searching by type, Just check the full time checkbox
-- Search by checking the city checkboxes
-- At the bottom of the job list, you can see other jobs by going to the next page.
+- Select where you destination is.
+- See seats left
+- Book a place
 
 ## How To Use
 
@@ -106,7 +106,9 @@ $ parcel index.html
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
+I could not finish the account feature.
+
 ## Contact
 
--   Website [Github jobs](https://fanilo-github-jobs.netlify.app/)
+-   Website [Github jobs]("https://fanilo-mahanoro-station.netlify.app/")
 -   GitHub [lightme-fan](https://github.com/lightme-fan/mahanoro-station)

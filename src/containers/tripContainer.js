@@ -10,6 +10,8 @@ import { format, getYear } from 'date-fns'
 function TripContainer() {
     const { destination } = useParams()
     const tripDestination = useSelector(state => state.tripsData)
+    console.log(tripDestination);
+
     const trips = tripDestination.filter(city => city.destination === destination)
     return (
         <Trips>
@@ -23,22 +25,26 @@ function TripContainer() {
                     </div>
                 </Trips.Title>
                 {trips.map(trip => {
-                    const availableSeats = trip.seats.filter(seat => seat.isAvailable).length
+                    const availableSeats = trip.seats.filter(seat => seat.isAvailable === true).length
+                    const dayDeparture = new Date(trip.departureTime)
                     return (
                         <Trips.Card key={trip.id}>
                             <Trips.CarLogo src={carIcon} />
                             <Trips.Departure>
                                 <Trips.TimeDeparture>
-                                    <div>{trip.departureTime}</div>
+                                    <div>
+                                        <div>{format(dayDeparture, 'eeee')}</div>
+                                        <div>{`${format(dayDeparture, 'kk')}: ${format(dayDeparture, 'mm')}`}</div>
+                                    </div>
                                 </Trips.TimeDeparture>
                                 <Trips.DateDeparture>
-                                    <div>{trip.departureTime}</div>
+                                    <div>{`${format(dayDeparture, 'ee')}/${format(dayDeparture, 'MM')}/2020`}</div>
                                     <Trips.AvailableSeats>{availableSeats} seats lefts</Trips.AvailableSeats>
                                 </Trips.DateDeparture>
                             </Trips.Departure>
                             {availableSeats === 0 ?
                                 <button disabled>Book a seat</button> :
-                                <Link to={`/destination/${trip.destination}/${trip.destination}`}>Book a seat</Link>}                                
+                                <Link to={`/destination/${trip.destination}/${trip.id}`}>Book a seat</Link>}                                
                         </Trips.Card>
                     )
                 })}

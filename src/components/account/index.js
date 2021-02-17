@@ -3,6 +3,7 @@ import React from 'react'
 import {
     Container,
     Wrapper,
+    Detail,
     Form,
     FormLabel,
     FormSpan,
@@ -21,6 +22,10 @@ function Account({children, ...restProps}) {
 
 Account.Wrapper = function AccountWrapper({children, ...restProps}) {
     return <Wrapper {...restProps}>{children}</Wrapper>
+}
+
+Account.Detail = function AccountDetail({children, ...restProps}) {
+    return <Detail {...restProps}>{children}</Detail>
 }
 
 Account.Form = function AccountForm({children, ...restProps}) {

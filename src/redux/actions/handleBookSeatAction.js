@@ -4,3 +4,11 @@ export function handleBookSeatAction(item) {
         payload: item
     }
 }
+
+export function addClassNameAction(item) {
+    return {
+        type: 'ADD_CLASS_NAME',
+        payload: item
+    }
+}
+
